@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './App.css';
 
@@ -12,22 +12,16 @@ import ContactPage from './pages/Contactpage';
 
 function App() {
   return (
+    <div>    
     <Router>
-      <div>
         <Nav />
-      <Switch>
-      <Route path="/">
-          <HomePage />
-        </Route>
-        <Route path="/contact">
-          <ContactPage />
-        </Route>
-        <Route path="/about">
-          <AboutPage />
-        </Route>
-      </Switch>
-      </div>
+      <Routes>
+      <Route path="/" element={<HomePage/>} />
+        <Route path="/contact" element={<ContactPage/>} />
+        <Route path="/about" element={<AboutPage/>} />
+      </Routes>
     </Router>
+      </div>
   );
 }
 
