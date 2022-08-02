@@ -12,16 +12,16 @@ import ContactPage from './pages/Contactpage';
 
 function App() {
   return (
-    <div>    
-    <Router>
+    <div>
+      <Router>
         <Nav />
-      <Routes>
-      <Route path="/" element={<HomePage/>} />
-        <Route path="/contact" element={<ContactPage/>} />
-        <Route path="/about" element={<AboutPage/>} />
-      </Routes>
-    </Router>
-      </div>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
